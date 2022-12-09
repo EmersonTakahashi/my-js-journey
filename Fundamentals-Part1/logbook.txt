@@ -1,0 +1,11 @@
+Space, the final frontier
+These are the voyages of the Starship Enterprise
+Its five year mission
+To explore strange new worlds
+To seek out new life
+And new civilizations
+To boldly go where no man has gone before
+
+#logbook date 2022-12-09
+This is my first day in my journey to become a FullStack developer, so I decided to start learn JS again, back to 2017/2018 I was in the high school and I learned JS, but I just used in the school. I want to become a fullstack developer, so for this reason I will need to learn this powerful language! I started today a course in Udemy, I already know everything that I watched today, I decided to start from zero so I decided to recap everything that I know about JS. I don't think I'll regret it cause I will learn every base fundamental, that is really important!!! So let's go.
+
