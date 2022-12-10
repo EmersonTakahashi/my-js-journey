@@ -62,24 +62,37 @@ let isItRight = false; //bollean
 // const ageEmilly = now - 2000;
 // console.log(ageEmerson, ageEmilly);
 
-////// Chalenge 1
-//BMI = mass / height ** 2
-const marksWeights = 78;
-const marksHeight = 1.69;
-const johnWeights = 92;
-const johnHeight = 1.95;
+/////Strings and template literals
+// const firstName = "Emerson";
+// const job = "Backend Developer";
+// const birthDate = 2000;
+// const year = 2022;
 
-const marksWeights2 = 95;
-const marksHeight2 = 1.88;
-const johnWeights2 = 85;
-const johnHeight2 = 1.76;
+// const emerson =
+//   "I'm " + firstName + ", a " + (year - birthDate) + " years old " + job + "!";
+// console.log(emerson);
 
-const marksBMI = marksWeights / marksHeight ** 2;
-const marksBMI2 = marksWeights / marksHeight ** 2;
-const johnBMI = johnWeights / johnHeight ** 2;
-const johnBMI2 = johnWeights2 / johnHeight2 ** 2;
+// const emersonNew = `I'm ${firstName}, a ${year - birthDate} years old ${job}!`;
+// console.log(emersonNew);
 
-const markHigherBMI = marksBMI > johnBMI;
-const markHigherBMI2 = marksBMI2 > johnBMI2;
+/////decisions IF and ELSE
 
-console.log(markHigherBMI, markHigherBMI2);
+const age = 22;
+const isOldEnough = age >= 18;
+
+if (isOldEnough) {
+  console.log("Emilly can start driving license 🚗");
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`Emilly is too your, wait another ${yearsLeft} year(s) :)`);
+}
+
+const birthDate = 2000;
+let century;
+if (birthDate <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+
+console.log(`Century: ${century}`);
