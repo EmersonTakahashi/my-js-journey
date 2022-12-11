@@ -144,31 +144,54 @@ let isItRight = false; //bollean
 ////// EQUALITY OPERATORS == AND ===
 //=== strict doesn't type coercion
 // const age = 18;
-const age = "18";
-if (age === 18) console.log("You just became an adult :D (strict)");
+// const age = "18";
+// if (age === 18) console.log("You just became an adult :D (strict)");
 
-//== loose does type coercion
-if (age == 18) console.log("You just became an adult :D (loose)");
+// //== loose does type coercion
+// if (age == 18) console.log("You just became an adult :D (loose)");
 
-const favourite = Number(prompt("What is your favourite number?"));
+// const favourite = Number(prompt("What is your favourite number?"));
 
-console.log(favourite);
-console.log(typeof favourite);
+// console.log(favourite);
+// console.log(typeof favourite);
 
-if (favourite == 8) {
-  //"8" == 8
-  console.log("Cool! 8 is an amazing number! (loose)");
-}
+// if (favourite == 8) {
+//   //"8" == 8
+//   console.log("Cool! 8 is an amazing number! (loose)");
+// }
 
-if (favourite === 8) {
-  //"8" === 8
-  console.log("Cool! 8 is an amazing number! (strict)");
-} else if (favourite === 10) {
-  console.log("10 is also a cool number");
-} else {
-  console.log("Number is not 8 or 10");
-}
+// if (favourite === 8) {
+//   //"8" === 8
+//   console.log("Cool! 8 is an amazing number! (strict)");
+// } else if (favourite === 10) {
+//   console.log("10 is also a cool number");
+// } else {
+//   console.log("Number is not 8 or 10");
+// }
 
-if (favourite !== 11) {
-  console.log("Why not 11?");
+// if (favourite !== 11) {
+//   console.log("Why not 11?");
+// }
+
+///// Switch statement
+const day = "saturday";
+switch (day) {
+  case "monday":
+  case "wednesday":
+    console.log("Study Js");
+    break;
+  case "tuesday":
+  case "thursday":
+    console.log("Study HTML and CSS");
+    break;
+  case "friday":
+    console.log("Study something else");
+    break;
+  case "saturday":
+  case "sunday":
+    console.log("Study what you wish if you have time to do it");
+    break;
+  default:
+    console.log("Not a valid day!");
+    break;
 }
