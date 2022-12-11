@@ -77,22 +77,98 @@ let isItRight = false; //bollean
 
 /////decisions IF and ELSE
 
-const age = 22;
-const isOldEnough = age >= 18;
+// const age = 22;
+// const isOldEnough = age >= 18;
 
-if (isOldEnough) {
-  console.log("Emilly can start driving license 🚗");
-} else {
-  const yearsLeft = 18 - age;
-  console.log(`Emilly is too your, wait another ${yearsLeft} year(s) :)`);
+// if (isOldEnough) {
+//   console.log("Emilly can start driving license 🚗");
+// } else {
+//   const yearsLeft = 18 - age;
+//   console.log(`Emilly is too your, wait another ${yearsLeft} year(s) :)`);
+// }
+
+// const birthDate = 2000;
+// let century;
+// if (birthDate <= 2000) {
+//   century = 20;
+// } else {
+//   century = 21;
+// }
+
+// console.log(`Century: ${century}`);
+
+////// CONVERSION and COERCION
+//type conversion
+// const inputYear = "1991";
+// console.log(Number(inputYear), inputYear);
+// console.log(inputYear + 18);
+// console.log(Number(inputYear) + 18);
+
+// console.log(Number("Emerson"));
+// console.log(typeof NaN);
+
+// console.log(String(23));
+
+// //type coercion
+// console.log("I am " + 22 + " years old");
+// console.log("23" - "10" - 3);
+// console.log("23" * "2");
+// console.log("23" / "2");
+
+/////// TRUTHY AND FALSY VALUES
+
+//5 falsy values: 0, '', undefined, null, NaN
+//everything else will be converted to true
+
+// console.log(Boolean(0));
+// console.log(Boolean(undefined));
+// console.log(Boolean("Emerson"));
+// console.log(Boolean({}));
+// console.log(Boolean(""));
+// console.log(Boolean(NaN));
+
+// const money = 100;
+// if (money) {
+//   console.log("Don't spend it all ;)");
+// } else {
+//   console.log("You should get a job");
+// }
+
+// let height = 0;
+// if (height) {
+//   console.log("YAY! Height is defined");
+// } else {
+//   console.log("Height is UNDEFINED");
+// }
+
+////// EQUALITY OPERATORS == AND ===
+//=== strict doesn't type coercion
+// const age = 18;
+const age = "18";
+if (age === 18) console.log("You just became an adult :D (strict)");
+
+//== loose does type coercion
+if (age == 18) console.log("You just became an adult :D (loose)");
+
+const favoutire = Number(prompt("What is your favoutire number?"));
+
+console.log(favoutire);
+console.log(typeof favoutire);
+
+if (favoutire == 8) {
+  //"8" == 8
+  console.log("Cool! 8 is an amazing number! (loose)");
 }
 
-const birthDate = 2000;
-let century;
-if (birthDate <= 2000) {
-  century = 20;
+if (favoutire === 8) {
+  //"8" === 8
+  console.log("Cool! 8 is an amazing number! (strict)");
+} else if (favoutire === 10) {
+  console.log("10 is also a cool number");
 } else {
-  century = 21;
+  console.log("Number is not 8 or 10");
 }
 
-console.log(`Century: ${century}`);
+if (favoutire !== 11) {
+  console.log("Why not 11?");
+}
