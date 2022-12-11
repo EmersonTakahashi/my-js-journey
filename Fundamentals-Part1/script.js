@@ -150,25 +150,25 @@ if (age === 18) console.log("You just became an adult :D (strict)");
 //== loose does type coercion
 if (age == 18) console.log("You just became an adult :D (loose)");
 
-const favoutire = Number(prompt("What is your favoutire number?"));
+const favourite = Number(prompt("What is your favourite number?"));
 
-console.log(favoutire);
-console.log(typeof favoutire);
+console.log(favourite);
+console.log(typeof favourite);
 
-if (favoutire == 8) {
+if (favourite == 8) {
   //"8" == 8
   console.log("Cool! 8 is an amazing number! (loose)");
 }
 
-if (favoutire === 8) {
+if (favourite === 8) {
   //"8" === 8
   console.log("Cool! 8 is an amazing number! (strict)");
-} else if (favoutire === 10) {
+} else if (favourite === 10) {
   console.log("10 is also a cool number");
 } else {
   console.log("Number is not 8 or 10");
 }
 
-if (favoutire !== 11) {
+if (favourite !== 11) {
   console.log("Why not 11?");
 }
