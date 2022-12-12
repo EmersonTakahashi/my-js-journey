@@ -34,39 +34,48 @@
 
 ////Challenge 3
 
-const dolphinsScore = [80, 112, 150];
-const KoalasScore = [80, 112, 150];
+// const dolphinsScore = [80, 112, 150];
+// const KoalasScore = [80, 112, 150];
 
-const dolphinsAverage = getAverage(dolphinsScore);
-const KoalasAverage = getAverage(KoalasScore);
-const minimumScoreNeeded = 100;
-console.log(dolphinsAverage, KoalasAverage);
+// const dolphinsAverage = getAverage(dolphinsScore);
+// const KoalasAverage = getAverage(KoalasScore);
+// const minimumScoreNeeded = 100;
+// console.log(dolphinsAverage, KoalasAverage);
 
-if (dolphinsAverage >= minimumScoreNeeded && dolphinsAverage > KoalasAverage) {
-  console.log(`Team Dolphins is the winner! average: ${dolphinsAverage}`);
-} else if (
-  KoalasAverage >= minimumScoreNeeded &&
-  KoalasAverage > dolphinsAverage
-) {
-  console.log(`Team Koalas is the winner! average: ${KoalasAverage}`);
-} else if (
-  KoalasAverage >= minimumScoreNeeded &&
-  dolphinsAverage >= minimumScoreNeeded &&
-  KoalasAverage === dolphinsAverage
-) {
-  console.log(`It is a draw! Both win the trophy`);
-} else {
-  console.log(
-    `No one wins the trophy.Minimum score needed ${minimumScoreNeeded}`
-  );
-}
+// if (dolphinsAverage >= minimumScoreNeeded && dolphinsAverage > KoalasAverage) {
+//   console.log(`Team Dolphins is the winner! average: ${dolphinsAverage}`);
+// } else if (
+//   KoalasAverage >= minimumScoreNeeded &&
+//   KoalasAverage > dolphinsAverage
+// ) {
+//   console.log(`Team Koalas is the winner! average: ${KoalasAverage}`);
+// } else if (
+//   KoalasAverage >= minimumScoreNeeded &&
+//   dolphinsAverage >= minimumScoreNeeded &&
+//   KoalasAverage === dolphinsAverage
+// ) {
+//   console.log(`It is a draw! Both win the trophy`);
+// } else {
+//   console.log(
+//     `No one wins the trophy.Minimum score needed ${minimumScoreNeeded}`
+//   );
+// }
 
-function getAverage(scores) {
-  let average;
-  let totalSum = 0;
-  for (let i = 0; i < scores.length; i++) {
-    totalSum += scores[i];
-  }
-  average = totalSum / scores.length;
-  return average;
-}
+// function getAverage(scores) {
+//   let average;
+//   let totalSum = 0;
+//   for (let i = 0; i < scores.length; i++) {
+//     totalSum += scores[i];
+//   }
+//   average = totalSum / scores.length;
+//   return average;
+// }
+
+//////Challenge 4
+const bill = 430;
+
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+console.log(
+  `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`
+);

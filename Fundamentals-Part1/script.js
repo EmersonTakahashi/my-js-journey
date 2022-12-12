@@ -174,24 +174,40 @@ let isItRight = false; //bollean
 // }
 
 ///// Switch statement
-const day = "saturday";
-switch (day) {
-  case "monday":
-  case "wednesday":
-    console.log("Study Js");
-    break;
-  case "tuesday":
-  case "thursday":
-    console.log("Study HTML and CSS");
-    break;
-  case "friday":
-    console.log("Study something else");
-    break;
-  case "saturday":
-  case "sunday":
-    console.log("Study what you wish if you have time to do it");
-    break;
-  default:
-    console.log("Not a valid day!");
-    break;
-}
+// const day = "saturday";
+// switch (day) {
+//   case "monday":
+//   case "wednesday":
+//     console.log("Study Js");
+//     break;
+//   case "tuesday":
+//   case "thursday":
+//     console.log("Study HTML and CSS");
+//     break;
+//   case "friday":
+//     console.log("Study something else");
+//     break;
+//   case "saturday":
+//   case "sunday":
+//     console.log("Study what you wish if you have time to do it");
+//     break;
+//   default:
+//     console.log("Not a valid day!");
+//     break;
+// }
+
+///// the conditional ternary operator
+
+const age = 1;
+age >= 18
+  ? console.log("I like to drink vodka, specially caipirinha 🍹")
+  : console.log("I like to drink water 💧");
+
+const drink = age >= 18 ? "vodka (caipirinha) 🍹" : "water 💧";
+
+console.log(drink);
+
+//we can use it in template literal
+console.log(
+  `I like to drink ${age >= 18 ? "vodka specially caipirinha 🍹" : "water 💧"}`
+);
