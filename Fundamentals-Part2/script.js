@@ -48,15 +48,52 @@
 // console.log(age1, age2);
 
 /////// Arrow function
-const calculateAge3 = (birthYear) => 2022 - birthYear;
+// const calculateAge3 = (birthYear) => 2022 - birthYear;
 
-const age3 = calculateAge3(2000);
-console.log(age3);
+// const age3 = calculateAge3(2000);
+// console.log(age3);
 
-const yearsUntilRetirement = (birthYear, firstName) => {
-  const age = 2022 - birthYear;
-  const retirement = 65 - age;
-  return `${firstName} retires in ${retirement} years`;
+// const yearsUntilRetirement = (birthYear, firstName) => {
+//   const age = 2022 - birthYear;
+//   const retirement = 65 - age;
+//   return `${firstName} retires in ${retirement} years`;
+// };
+
+// console.log(yearsUntilRetirement(2000, "Emerson"));
+////////Array
+
+const countries = ["Brazil", "Japan", "Portugal", "Denmark"];
+const years = new Array(2000, 2001, 2002);
+console.log(countries.length);
+console.log(countries[countries.length - 1]);
+
+countries[2] = "Ireland";
+console.log(countries);
+
+const firstName = "Emerson";
+const emerson = [
+  firstName,
+  "Takahashi",
+  2022 - 2000,
+  "Backend Developer",
+  countries,
+];
+console.log(emerson);
+
+//Exercise
+const calcAge = function (birthYear) {
+  return 2022 - birthYear;
 };
+const yearsToCalculate = [1990, 1967, 2002, 2010, 2018];
 
-console.log(yearsUntilRetirement(2000, "Emerson"));
+const age1 = calcAge(yearsToCalculate[0]);
+const age2 = calcAge(yearsToCalculate[1]);
+const age3 = calcAge(yearsToCalculate[2]);
+console.log(age1, age2, age3);
+
+const ages = [
+  calcAge(yearsToCalculate[0]),
+  calcAge(yearsToCalculate[1]),
+  calcAge(yearsToCalculate[2]),
+];
+console.log(ages);
