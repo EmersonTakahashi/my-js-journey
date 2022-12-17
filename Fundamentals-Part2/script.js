@@ -126,40 +126,74 @@
 // }
 
 ////// INTRODUCTION TO OBJECTS
+// const emerson = {
+//   firstName: "Emerson",
+//   lastName: "Takahashi",
+//   age: 2022 - 2000,
+//   job: "Backend developer",
+//   techSkills: ["C#", ".net", "SQL"],
+// };
+
+// console.log(emerson);
+// console.log(emerson.lastName);
+// console.log(emerson["lastName"]);
+
+// const nameKey = "Name";
+// console.log(emerson["first" + nameKey]);
+// console.log(emerson["last" + nameKey]);
+
+// const interestedIn = prompt(
+//   "What do you want to know about Emerson? Choose between firstName, lastName, age, job, and techSkills"
+// );
+
+// console.log(`Interested in "${interestedIn}"`);
+
+// if (emerson[interestedIn]) {
+//   console.log(emerson[interestedIn]);
+// } else {
+//   console.log(
+//     "Wrong request! Choose between firstName, lastName, age, job, and techSkills"
+//   );
+// }
+
+// emerson.location = "Brazil";
+// emerson["favoriteGames"] = ["CSGO", "Let's cook together"];
+// console.log(emerson);
+// //Challenge
+// console.log(
+//   `${emerson.firstName} has ${emerson.favoriteGames.length} favorite games, and his favorite game is called ${emerson.favoriteGames[0]}`
+// );
+///////Object methods
 const emerson = {
   firstName: "Emerson",
   lastName: "Takahashi",
-  age: 2022 - 2000,
+  birthYear: 2000,
   job: "Backend developer",
   techSkills: ["C#", ".net", "SQL"],
+  hasDriverLicense: true,
+  // calcAge: function (birthYear) {
+  //   return 2022 - birthYear;
+  // },
+  // calcAge: function () {
+  //   return 2022 - this.birthYear;
+  // },
+  calcAge: function () {
+    this.age = 2022 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function () {
+    console.log(
+      `${this.firstName} is a ${this.calcAge()} years old, ${
+        this.job
+      }, and he has ${this.hasDriverLicense ? "a" : "no"} driver's license`
+    );
+  },
 };
-
 console.log(emerson);
-console.log(emerson.lastName);
-console.log(emerson["lastName"]);
+console.log(emerson.calcAge());
+console.log(emerson.age);
+console.log(emerson.age);
+console.log(emerson.age);
 
-const nameKey = "Name";
-console.log(emerson["first" + nameKey]);
-console.log(emerson["last" + nameKey]);
-
-const interestedIn = prompt(
-  "What do you want to know about Emerson? Choose between firstName, lastName, age, job, and techSkills"
-);
-
-console.log(`Interested in "${interestedIn}"`);
-
-if (emerson[interestedIn]) {
-  console.log(emerson[interestedIn]);
-} else {
-  console.log(
-    "Wrong request! Choose between firstName, lastName, age, job, and techSkills"
-  );
-}
-
-emerson.location = "Brazil";
-emerson["favoriteGames"] = ["CSGO", "Let's cook together"];
-console.log(emerson);
 //Challenge
-console.log(
-  `${emerson.firstName} has ${emerson.favoriteGames.length} favorite games, and his favorite game is called ${emerson.favoriteGames[0]}`
-);
+console.log(emerson.getSummary());
