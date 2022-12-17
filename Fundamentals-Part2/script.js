@@ -199,10 +199,50 @@
 // console.log(emerson.getSummary());
 
 ////// INTERATION LOOP: FOR
-for (let i = 0; i < 10; i++) {
-  console.log(`counter: ${i + 1}`);
-}
+// for (let i = 0; i < 10; i++) {
+//   console.log(`counter: ${i + 1}`);
+// }
 
+// const emerson = [
+//   "Emerson",
+//   "Takahashi",
+//   2022 - 2000,
+//   "Backend Developer",
+//   ["Brazil", "Japão", "Portugal", "Denmark"],
+// ];
+// const types = [];
+// for (let i = 0; i < emerson.length; i++) {
+//   //reading from emerson array
+//   console.log(emerson[i], typeof emerson[i]);
+//   //filling types array
+//   // types[i] = typeof emerson[i];
+//   types.push(typeof emerson[i]);
+// }
+// console.log(types);
+
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2022 - years[i]);
+// }
+// console.log(ages);
+
+// //continue and break
+// console.log("---ONLY STRINGS---");
+// for (let i = 0; i < emerson.length; i++) {
+//   if (typeof emerson[i] !== "string") {
+//     continue;
+//   }
+//   console.log(emerson[i], typeof emerson[i]);
+// }
+
+// console.log("---BREAK WITH NUMBER---");
+// for (let i = 0; i < emerson.length; i++) {
+//   if (typeof emerson[i] === "number") {
+//     break;
+//   }
+//   console.log(emerson[i], typeof emerson[i]);
+// }
 const emerson = [
   "Emerson",
   "Takahashi",
@@ -210,36 +250,14 @@ const emerson = [
   "Backend Developer",
   ["Brazil", "Japão", "Portugal", "Denmark"],
 ];
-const types = [];
-for (let i = 0; i < emerson.length; i++) {
-  //reading from emerson array
-  console.log(emerson[i], typeof emerson[i]);
-  //filling types array
-  // types[i] = typeof emerson[i];
-  types.push(typeof emerson[i]);
-}
-console.log(types);
 
-const years = [1991, 2007, 1969, 2020];
-const ages = [];
-for (let i = 0; i < years.length; i++) {
-  ages.push(2022 - years[i]);
+for (let i = emerson.length - 1; i >= 0; i--) {
+  console.log(i, emerson[i]);
 }
-console.log(ages);
 
-//continue and break
-console.log("---ONLY STRINGS---");
-for (let i = 0; i < emerson.length; i++) {
-  if (typeof emerson[i] !== "string") {
-    continue;
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`-------- Starting exercise ${exercise}`);
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise} Lifting weight repetition ${rep} 🚕`);
   }
-  console.log(emerson[i], typeof emerson[i]);
-}
-
-console.log("---BREAK WITH NUMBER---");
-for (let i = 0; i < emerson.length; i++) {
-  if (typeof emerson[i] === "number") {
-    break;
-  }
-  console.log(emerson[i], typeof emerson[i]);
 }
