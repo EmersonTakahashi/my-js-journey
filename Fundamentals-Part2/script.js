@@ -100,27 +100,66 @@
 
 /////Basic Array Operations(Methods)
 //push to add in the end in the array
-const countries = ["Brazil", "Japan", "Portugal", "Denmark"];
-const countriesLength = countries.push("Japan");
-console.log(countries);
-console.log(countriesLength);
-//unshift to add in the beggining in the arraty
-countries.unshift("Japan");
-console.log(countries);
-//pop remove the last element in the array
-const removedCountry = countries.pop();
-console.log(countries);
-console.log(removedCountry);
-//shift remove the first element in the array
-countries.shift();
-console.log(countries);
-//indexOf
-console.log(countries.indexOf("Brazil"));
-console.log(countries.indexOf("Italy")); //if doesn't exist, then return -1
-//includes
-console.log(countries.includes("Brazil"));
-console.log(countries.includes("Italy"));
+// const countries = ["Brazil", "Japan", "Portugal", "Denmark"];
+// const countriesLength = countries.push("Japan");
+// console.log(countries);
+// console.log(countriesLength);
+// //unshift to add in the beggining in the arraty
+// countries.unshift("Japan");
+// console.log(countries);
+// //pop remove the last element in the array
+// const removedCountry = countries.pop();
+// console.log(countries);
+// console.log(removedCountry);
+// //shift remove the first element in the array
+// countries.shift();
+// console.log(countries);
+// //indexOf
+// console.log(countries.indexOf("Brazil"));
+// console.log(countries.indexOf("Italy")); //if doesn't exist, then return -1
+// //includes
+// console.log(countries.includes("Brazil"));
+// console.log(countries.includes("Italy"));
 
-if (countries.includes("Brazil")) {
-  console.log("I love Brazil");
+// if (countries.includes("Brazil")) {
+//   console.log("I love Brazil");
+// }
+
+////// INTRODUCTION TO OBJECTS
+const emerson = {
+  firstName: "Emerson",
+  lastName: "Takahashi",
+  age: 2022 - 2000,
+  job: "Backend developer",
+  techSkills: ["C#", ".net", "SQL"],
+};
+
+console.log(emerson);
+console.log(emerson.lastName);
+console.log(emerson["lastName"]);
+
+const nameKey = "Name";
+console.log(emerson["first" + nameKey]);
+console.log(emerson["last" + nameKey]);
+
+const interestedIn = prompt(
+  "What do you want to know about Emerson? Choose between firstName, lastName, age, job, and techSkills"
+);
+
+console.log(`Interested in "${interestedIn}"`);
+
+if (emerson[interestedIn]) {
+  console.log(emerson[interestedIn]);
+} else {
+  console.log(
+    "Wrong request! Choose between firstName, lastName, age, job, and techSkills"
+  );
 }
+
+emerson.location = "Brazil";
+emerson["favoriteGames"] = ["CSGO", "Let's cook together"];
+console.log(emerson);
+//Challenge
+console.log(
+  `${emerson.firstName} has ${emerson.favoriteGames.length} favorite games, and his favorite game is called ${emerson.favoriteGames[0]}`
+);
