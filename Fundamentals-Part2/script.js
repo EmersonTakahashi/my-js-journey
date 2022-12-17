@@ -164,36 +164,82 @@
 //   `${emerson.firstName} has ${emerson.favoriteGames.length} favorite games, and his favorite game is called ${emerson.favoriteGames[0]}`
 // );
 ///////Object methods
-const emerson = {
-  firstName: "Emerson",
-  lastName: "Takahashi",
-  birthYear: 2000,
-  job: "Backend developer",
-  techSkills: ["C#", ".net", "SQL"],
-  hasDriverLicense: true,
-  // calcAge: function (birthYear) {
-  //   return 2022 - birthYear;
-  // },
-  // calcAge: function () {
-  //   return 2022 - this.birthYear;
-  // },
-  calcAge: function () {
-    this.age = 2022 - this.birthYear;
-    return this.age;
-  },
-  getSummary: function () {
-    console.log(
-      `${this.firstName} is a ${this.calcAge()} years old, ${
-        this.job
-      }, and he has ${this.hasDriverLicense ? "a" : "no"} driver's license`
-    );
-  },
-};
-console.log(emerson);
-console.log(emerson.calcAge());
-console.log(emerson.age);
-console.log(emerson.age);
-console.log(emerson.age);
+// const emerson = {
+//   firstName: "Emerson",
+//   lastName: "Takahashi",
+//   birthYear: 2000,
+//   job: "Backend developer",
+//   techSkills: ["C#", ".net", "SQL"],
+//   hasDriverLicense: true,
+//   // calcAge: function (birthYear) {
+//   //   return 2022 - birthYear;
+//   // },
+//   // calcAge: function () {
+//   //   return 2022 - this.birthYear;
+//   // },
+//   calcAge: function () {
+//     this.age = 2022 - this.birthYear;
+//     return this.age;
+//   },
+//   getSummary: function () {
+//     console.log(
+//       `${this.firstName} is a ${this.calcAge()} years old, ${
+//         this.job
+//       }, and he has ${this.hasDriverLicense ? "a" : "no"} driver's license`
+//     );
+//   },
+// };
+// console.log(emerson);
+// console.log(emerson.calcAge());
+// console.log(emerson.age);
+// console.log(emerson.age);
+// console.log(emerson.age);
 
-//Challenge
-console.log(emerson.getSummary());
+// //Challenge
+// console.log(emerson.getSummary());
+
+////// INTERATION LOOP: FOR
+for (let i = 0; i < 10; i++) {
+  console.log(`counter: ${i + 1}`);
+}
+
+const emerson = [
+  "Emerson",
+  "Takahashi",
+  2022 - 2000,
+  "Backend Developer",
+  ["Brazil", "Japão", "Portugal", "Denmark"],
+];
+const types = [];
+for (let i = 0; i < emerson.length; i++) {
+  //reading from emerson array
+  console.log(emerson[i], typeof emerson[i]);
+  //filling types array
+  // types[i] = typeof emerson[i];
+  types.push(typeof emerson[i]);
+}
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+for (let i = 0; i < years.length; i++) {
+  ages.push(2022 - years[i]);
+}
+console.log(ages);
+
+//continue and break
+console.log("---ONLY STRINGS---");
+for (let i = 0; i < emerson.length; i++) {
+  if (typeof emerson[i] !== "string") {
+    continue;
+  }
+  console.log(emerson[i], typeof emerson[i]);
+}
+
+console.log("---BREAK WITH NUMBER---");
+for (let i = 0; i < emerson.length; i++) {
+  if (typeof emerson[i] === "number") {
+    break;
+  }
+  console.log(emerson[i], typeof emerson[i]);
+}
