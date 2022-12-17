@@ -243,21 +243,38 @@
 //   }
 //   console.log(emerson[i], typeof emerson[i]);
 // }
-const emerson = [
-  "Emerson",
-  "Takahashi",
-  2022 - 2000,
-  "Backend Developer",
-  ["Brazil", "Japão", "Portugal", "Denmark"],
-];
+///// DECREASING LOOP FOR
+// const emerson = [
+//   "Emerson",
+//   "Takahashi",
+//   2022 - 2000,
+//   "Backend Developer",
+//   ["Brazil", "Japão", "Portugal", "Denmark"],
+// ];
 
-for (let i = emerson.length - 1; i >= 0; i--) {
-  console.log(i, emerson[i]);
+// for (let i = emerson.length - 1; i >= 0; i--) {
+//   console.log(i, emerson[i]);
+// }
+
+// for (let exercise = 1; exercise < 4; exercise++) {
+//   console.log(`-------- Starting exercise ${exercise}`);
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(`Exercise ${exercise} Lifting weight repetition ${rep} 🚕`);
+//   }
+// }
+
+//////WHILE LOOP
+let rep = 1;
+while (rep < 11) {
+  console.log(`Lifting weight repetition ${rep} 🚕`);
+  rep++;
 }
 
-for (let exercise = 1; exercise < 4; exercise++) {
-  console.log(`-------- Starting exercise ${exercise}`);
-  for (let rep = 1; rep < 6; rep++) {
-    console.log(`Exercise ${exercise} Lifting weight repetition ${rep} 🚕`);
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+  console.log(`You rolled a: ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) {
+    console.log(`Loop is about to end... You rolled a ${dice}`);
   }
 }
