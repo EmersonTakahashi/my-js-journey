@@ -1,4 +1,4 @@
-///// Challenge 1
+///// Challenge 1 FUNCTIONS
 
 // const calcAverage = (scores) => {
 //   let sum = 0;
@@ -42,7 +42,7 @@
 // );
 // checkWinner(koalasAverage, dolphinsAverage);
 
-///// Challenge 2
+///// Challenge 2 ARRAY
 // function calcTip(billValue) {
 //   if (billValue >= 50 && billValue <= 300) {
 //     return billValue * 0.15;
@@ -60,37 +60,66 @@
 // const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
 
 // console.log(total);
-///// Challenge 3
-const mark = {
-  fullName: "Mark Miller",
-  massInKg: 78,
-  heightInM: 1.69,
-  calcBMI: function () {
-    this.BMI = this.massInKg / this.heightInM ** 2;
-    return this.BMI;
-  },
-};
+///// Challenge 3 OBJECTS
+// const mark = {
+//   fullName: "Mark Miller",
+//   massInKg: 78,
+//   heightInM: 1.69,
+//   calcBMI: function () {
+//     this.BMI = this.massInKg / this.heightInM ** 2;
+//     return this.BMI;
+//   },
+// };
 
-const john = {
-  fullName: "John Smith",
-  massInKg: 92,
-  heightInM: 1.95,
-  calcBMI: function () {
-    this.BMI = this.massInKg / this.heightInM ** 2;
-    return this.BMI;
-  },
-};
+// const john = {
+//   fullName: "John Smith",
+//   massInKg: 92,
+//   heightInM: 1.95,
+//   calcBMI: function () {
+//     this.BMI = this.massInKg / this.heightInM ** 2;
+//     return this.BMI;
+//   },
+// };
 
-if (mark.calcBMI() > john.calcBMI()) {
-  console.log(
-    `${mark.fullName}'s BMI (${mark.BMI}) is higher than ${john.fullName}'s BMI (${john.BMI}`
-  );
-} else if (john.BMI > mark.BMI) {
-  console.log(
-    `${john.fullName}'s BMI (${john.BMI}) is higher than ${mark.fullName}'s BMI (${mark.BMI}`
-  );
-} else {
-  console.log(
-    `They have the same BMI: ${mark.fullName}'s BMI (${mark.BMI}) and ${john.fullName}'s BMI (${john.BMI})`
-  );
+// if (mark.calcBMI() > john.calcBMI()) {
+//   console.log(
+//     `${mark.fullName}'s BMI (${mark.BMI}) is higher than ${john.fullName}'s BMI (${john.BMI}`
+//   );
+// } else if (john.BMI > mark.BMI) {
+//   console.log(
+//     `${john.fullName}'s BMI (${john.BMI}) is higher than ${mark.fullName}'s BMI (${mark.BMI}`
+//   );
+// } else {
+//   console.log(
+//     `They have the same BMI: ${mark.fullName}'s BMI (${mark.BMI}) and ${john.fullName}'s BMI (${john.BMI})`
+//   );
+// }
+///// Challenge 3 LOOPS
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+function calcTip(billValue) {
+  if (billValue >= 50 && billValue <= 300) {
+    return billValue * 0.15;
+  } else {
+    return billValue * 0.2;
+  }
 }
+
+function calcAverage(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+}
+
+for (let i = 0; i < bills.length; i++) {
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+  totals.push(tip + bills[i]);
+}
+console.log(bills, tips, totals);
+console.log(`Tips average: ${calcAverage(tips)}`);
+console.log(`Totals average: ${calcAverage(totals)}`);
