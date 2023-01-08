@@ -50,37 +50,50 @@ const restaurant = {
   },
 };
 ///////////////////////////////////////
+///////////THE FOR-OF LOOP/////////////
+///////////////////////////////////////
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menu) {
+  console.log(item);
+}
+
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
+
+///////////////////////////////////////
 //////REST PATTERN AND PARAMETERS//////
 ///////////////////////////////////////
-const [a, b, ...others] = [1, 2, 3, 4, 5];
-console.log(a, b, others);
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
+// console.log(a, b, others);
 
-const [pizza, , risotto, ...othersFood] = [
-  ...restaurant.mainMenu,
-  ...restaurant.starterMenu,
-];
-console.log(pizza, risotto, othersFood);
+// const [pizza, , risotto, ...othersFood] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
+// ];
+// console.log(pizza, risotto, othersFood);
 
-//Objects
-const { sat, ...weekdays } = restaurant.openingHours;
-console.log(weekdays);
+// //Objects
+// const { sat, ...weekdays } = restaurant.openingHours;
+// console.log(weekdays);
 
-//Functions
-const add = function (...numbers) {
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
-  console.log(sum);
-};
+// //Functions
+// const add = function (...numbers) {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+//   console.log(sum);
+// };
 
-add(2, 3);
-add(5, 3, 7, 2);
-add(2, 3, 7, 2, 2, 1, 60);
+// add(2, 3);
+// add(5, 3, 7, 2);
+// add(2, 3, 7, 2, 2, 1, 60);
 
-const x = [23, 5, 7];
-add(...x);
+// const x = [23, 5, 7];
+// add(...x);
 
-restaurant.orderPizza("cheese", "chicken", "palmito");
-restaurant.orderPizza("cheese");
+// restaurant.orderPizza("cheese", "chicken", "palmito");
+// restaurant.orderPizza("cheese");
 ///////////////////////////////////////
 ///////////SPREAD OPERATOR////////////
 //////////////////////////////////////
